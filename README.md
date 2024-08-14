@@ -19,4 +19,25 @@ Com base no vídeo de lançamento do iPhone de 2007 (link abaixo), deve-se elabo
    - Métodos: `exibirPagina()`, `adicionarNovaAba()`, `atualizarPagina()`
 
 ## Modelo UML
-<img src ="Modelando Iphone Com UML/UML.png">
+```Mermaid
+classDiagram
+    Iphone <|-- ReprodutorMusical
+    Iphone <|-- AparelhoTelefonico
+    Iphone <|-- NavegadorInternet
+    
+    class ReprodutorMusical{
+      +tocar()
+      +pausar()
+      +selecionarMusica()
+    }
+    class AparelhoTelefonico{
+      +ligar()
+      +atender()
+      +inicarCorreioDeVoz()
+    }
+    class NavegadorInternet{
+      +exibirPagina()
+      +adicionarNovaAba()
+      +atualizarPagina()
+    }
+```
